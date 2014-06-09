@@ -1,71 +1,402 @@
-<!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Xingchao by Presbyter</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Xingchao</h1>
-        <p>My online resume</p>
-
-        <p class="view"><a href="https://github.com/Presbyter/xingchao">View the Project on GitHub <small>Presbyter/xingchao</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/Presbyter/xingchao/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/Presbyter/xingchao/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/Presbyter/xingchao">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/Presbyter">Presbyter</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<title>个人简历</title>
+		<link rel="stylesheet" href="./css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./css/bootstrap-theme.min.css" />
+		<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+		
+		<style type="text/css">
+			body{
+				background-image:url(./bgimg.jpg)
+			}
+			.container {
+				width:940px;
+				margin-right:auto;
+				margin-left:auto;
+				margin-top:35px;
+			}
+			.container h1 strong{
+				margin-left:23px;
+			}
+			.left{
+				float:left;
+				width:33%;
+			}
+			.right{
+				float:left;
+				width:65%;
+				margin-left:15px;
+			}
+			.img-thumbnail{
+				width:95%;
+				margin:10px auto 10px;
+				display:block;
+			}
+			.name{
+				text-align:center;
+			}
+			.list-unstyled{
+				margin-left:10px;
+			}
+			.jineng{
+				width:95%;
+				display:block;
+				margin:40px auto 10px;
+			}
+			.xbtn{
+				width:95%;
+				display:block;
+				margin:20px auto 10px;
+			}
+			.xbtn p .label{
+				float:left;
+			}
+			.xbtn p .progress{
+				float:left;
+			}
+			.xbtn p span{
+				width:50px;
+				margin-right:6px;
+			}
+			.table th{
+				background-color:#428bca;
+				color:white;
+			}
+			.table tr td strong span{
+				margin-left:5px;
+				margin-right:15px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="container panel panel-default">
+			<h1><strong>邢超的个人简历</strong></h1>
+			<div class="left panel panel-default">
+				<img src="./SAM_3834.JPG" alt="" class="img-thumbnail" />
+				<h3 class="name">邢超</h3>
+				<ul class="list-unstyled">
+					<li><span class="glyphicon glyphicon-home"></span>&nbsp;籍贯: 吉林省公主岭市</li>
+					<li><span class="glyphicon glyphicon-phone"></span>&nbsp;电话: 13844881912</li>
+					<li><span class="glyphicon glyphicon-envelope"></span>&nbsp;E-mail: xingchao0203@hotmail.com</li>
+				</ul>
+				<div class="jineng panel panel-primary">
+					<div class="panel-heading">
+						<span class="glyphicon glyphicon-tags"></span>
+					&nbsp;技能</div>
+				</div>
+				<div class="xbtn">
+					<p><span class="label label-default">C#</span>
+						<div class="progress progress-striped">
+						  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+							<!-- <span class="sr-only">40% Complete (success)</span> -->
+						  </div>
+						</div>
+					</p>
+					<p><span class="label label-default">C++</span>
+						<div class="progress progress-striped">
+						  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+							<!-- <span class="sr-only">40% Complete (success)</span> -->
+						  </div>
+						</div>
+					</p>
+					<p><span class="label label-default">Jquery</span>
+						<div class="progress progress-striped">
+						  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+							<!-- <span class="sr-only">40% Complete (success)</span> -->
+						  </div>
+						</div>
+					</p>
+					<p><span class="label label-default">CSS</span>
+						<div class="progress progress-striped">
+						  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+							<!-- <span class="sr-only">40% Complete (success)</span> -->
+						  </div>
+						</div>
+					</p>
+					<p><span class="label label-default">HTML</span>
+						<div class="progress progress-striped">
+						  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+							<!-- <span class="sr-only">40% Complete (success)</span> -->
+						  </div>
+						</div>
+					</p>
+				</div>
+			</div>
+			<div class="right">
+				<div class="alert alert-info">
+					本人毕业于吉林大学应用技术学院(985 211 大专),在校期间参加过国信蓝点杯C程序设计竞赛,获得全国三等奖奖励.
+					2012年毕业后至今前夕,工作于SK C&C沈阳,担任初级软件工程师,负责项目需求分析,开发,测试,运营等工作.
+					对于计算机是出于兴趣的喜爱,同时我认为程序员是推动社会进步的生产者,我愿意为这样的工作付出努力.初入IT行业的我,还算是一枚新人,我会诚恳的接受前辈们的教诲,同时也需要更多的磨砺.
+				</div>
+				
+				<div class="alert alert-danger">
+					<table class="table table-striped table-condensed">
+						<thead>
+						<tr>
+							<th>
+								<span class="glyphicon glyphicon-tags"></span>
+									&nbsp;工作经验
+							</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>
+								<span class="glyphicon glyphicon-edit"></span>
+									&nbsp;2014/01 -- 至今 <strong>天津润滑油损益系统运维 [4个月]</strong>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<ul>
+									<li>
+										<strong>项目描述</strong>
+										系统用于获取SAP数据,并展示为图表形式,Download Excel文档,发表公告,计算相应费用,计算利润率等.
+									</li>
+									<li>
+										<strong>开发环境</strong>
+										Windows7, VS2012, MS SQL Server 2008r2
+									</li>
+									<li>
+										<strong>职责描述</strong>
+										开发工程师<br />
+										解决一期开发中的遗留Bug. <br />
+										协调并完成客户新增或变更的需求. <br />
+										客户利润率等计算公式变更,修改系统逻辑.
+									</li>
+									<li>
+										<strong>主要技术</strong>
+										ASP.NET(MVC 4.0), ADO.NET, Jquery, JS, HTML
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="glyphicon glyphicon-edit"></span>
+									&nbsp;2013/09 -- 至今 <strong>EPDM仓库管理系统开发 [8个月]</strong>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<ul>
+									<li>
+										<strong>项目描述</strong>
+										宁波EPDM材料订单信息,退货信息,出入库信息等管理系统.
+									</li>
+									<li>
+										<strong>开发环境</strong>
+										Windows7, VS2012, VSS2005, Oracle数据库, ComponentOne
+									</li>
+									<li>
+										<strong>职责描述</strong>
+										开发工程师<br />
+										负责订单模块的开发. <br />
+										负责原/辅材料信息模块开发.
+									</li>
+									<li>
+										<strong>主要技术</strong>
+										C#(WinForm)
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="glyphicon glyphicon-edit"></span>
+									&nbsp;2013/06—2013/09 <strong>电子审批系统运维 [4个月]</strong>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<ul>
+									<li>
+										<strong>项目描述</strong>
+										E-Approval System （电子审批系统）是以Microsoft技术及产品为基础的企业化定制软件，业务包括（企业无纸化办公）.
+									</li>
+									<li>
+										<strong>开发环境</strong>
+										Windows 7，VS2010，MS SQL Server 2008
+									</li>
+									<li>
+										<strong>职责描述</strong>
+										开发工程师<br />
+										学习电子审批业务逻辑. <br />
+										负责客户新需求的样式改善. <br />
+										开发起草模板等. 
+									</li>
+									<li>
+										<strong>主要技术</strong>
+										C#(WinForm)
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="glyphicon glyphicon-edit"></span>
+									&nbsp;2012/11 -- 2013/05 <strong>ActiveX Web Editor开发 [7个月]</strong>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<ul>
+									<li>
+										<strong>项目描述</strong>
+										ActiveX Web Editor是以Microsoft技术及产品为基础的在线富文本编辑器.
+									</li>
+									<li>
+										<strong>开发环境</strong>
+										Windows系统（Windows 7，Windows 8），VS2012
+									</li>
+									<li>
+										<strong>职责描述</strong>
+										负责表格功能模块开发. <br />
+										负责段落样式设置功能开发. <br />
+										负责表格样式属性设置功能开发. <br />
+										负责搭建测试Editor环境(模拟论坛发帖).
+									</li>
+									<li>
+										<strong>主要技术</strong>
+										C++, MFC, Ribbon
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<span class="glyphicon glyphicon-edit"></span>
+									&nbsp;2012/07—2012/10 <strong>E-HR系统运维改善 [4个月]</strong>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<ul>
+									<li>
+										<strong>项目描述</strong>
+										ActiveX Web Editor是以Microsoft技术及产品为基础的在线富文本编辑器.
+									</li>
+									<li>
+										<strong>开发环境</strong>
+										Windows7, VS2008, MS SQL Server 2008
+									</li>
+									<li>
+										<strong>职责描述</strong>
+										负责客户需求的系统改善. <br />
+										负责员工个人信息内容开发. <br />
+										负责履历信息模块改善.
+									</li>
+									<li>
+										<strong>主要技术</strong>
+										ASP.NET, ADO.NET, Jquery, HTML
+									</li>
+								</ul>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				
+				<div class="alert alert-danger">
+					<table class="table table-striped table-condensed">
+						<thead>
+							<tr>
+								<th>
+									<span class="glyphicon glyphicon-folder-open"></span>
+										&nbsp;教育经历
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><strong><span>2009 /09 - 2012 /06</span>吉林大学 应用技术学院 计算机应用技术 专业</strong></td>
+							</tr>
+							<tr>
+								<td><strong><span>2006 /09 - 2009 /06</span>吉林省公主岭市实验中学 高中部</strong></td>
+							</tr>
+							<tr>
+								<td><strong><span>2003 /09 - 2006 /06</span>吉林省公主岭市实验中学 初中部</strong></td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="table table-striped table-condensed">
+						<thead>
+							<tr>
+								<th>
+									<span class="glyphicon glyphicon-folder-open"></span>
+										&nbsp;培训经历
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><strong><span>2011 /12 - 2012 /05</span>沈阳东软培训中心 </strong></td>
+							</tr>
+							<tr>
+								<td><strong><span>&nbsp;</span>
+								<span>&nbsp;</span>
+								<span>&nbsp;</span>
+								<span>&nbsp;</span>
+								<span>&nbsp;</span>
+								(ASP.NET ADO.NET Javascript HTML CSS)</strong></td>
+							</tr>
+							<tr>
+								<td><strong><span>2013 /04 - 2013 /05</span>SK C&C社内培训 (SharePoint基础) </strong></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+				<div class="alert alert-danger">
+					<table class="table table-striped table-condensed">
+						<thead>
+							<tr>
+								<th>
+									<span class="glyphicon glyphicon-star"></span>
+										&nbsp;奖励情况
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><strong><span>2011年</span>国信蓝点杯 C程序设计竞赛 吉林省一等奖</strong></td>
+							</tr>
+							<tr>
+								<td><strong><span>2011年</span>国信蓝点杯 C程序设计竞赛 全国 三等奖</strong></td>
+							</tr>
+							<tr>
+								<td><strong><span>2012年</span>国信蓝点杯 C程序设计竞赛 吉林省一等奖</strong></td>
+							</tr>
+							<tr>
+								<td><strong><span>2012年</span>国信蓝点杯 C程序设计竞赛 全国 三等奖</strong></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+				<div class="alert alert-warning">
+					<table class="table table-striped table-condensed">
+						<thead>
+							<tr>
+								<th>
+									<span class="glyphicon glyphicon-star"></span>
+										&nbsp;兴趣爱好
+								</th>
+							</tr>
+						</thead>
+						<tfoot>
+							<tr>
+								<td><strong><span>树莓派</span>捣鼓成为下载机,变成NAS,架设nodejs,运行mongodb.一直想弄个个人代码服务器,但苦于没有外网ip(鹏博士宽带...)而没有实现.</strong></td>
+							</tr>
+							<tr>
+								<td><strong><span>阅读</span>睡前看看小说.比较喜欢月关,辰东等人写的小说(目前在看完美世界).</strong></td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
